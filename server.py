@@ -71,7 +71,7 @@ def make_api_request(url: str, params: dict, timeout: int = 10) -> Optional[Dict
 
 @mcp.tool()
 def get_policy_details(url: str, params: dict, timeout: int=10 ):
-    base_url = "GET_POLICY_DETAILS_URL"
+    base_url = GET_POLICY_DETAILS_URL
     params = {
         "api_key": secrets["AA_INTERNAL_API_KEY"]
     }
