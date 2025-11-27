@@ -112,6 +112,7 @@ def get_problem_codes(timeout: int = 10):
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http", host="0.0.0.0", port=8080)
+    mcp.run(transport="streamable-http", host="testmcpdemo-e2abdecseafneea8.westeurope-01.azurewebsites.net", port=8080)
     #mcp.run()
+
 
