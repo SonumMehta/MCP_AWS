@@ -22,7 +22,8 @@ from config import *
 
 # secrets = get_secrets("MCP_Secrets")
 
-mcp = FastMCP()
+port = int(os.getenv("PORT", 8000))
+mcp = FastMCP('mcptest',host="0.0.0.0", port=port)
 
 def make_api_request(url: str, params: dict, timeout: int = 10) -> Optional[Dict]:
     """
@@ -113,10 +114,11 @@ def get_problem_codes(timeout: int = 10):
 
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 8000))  # fallback to 8000 for local testing
-    mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
+    #port = int(os.getenv("PORT", 8000))  # fallback to 8000 for local testing
+    mcp.run(transport="streamable-http")
     #mcp.run(transport="streamable-http", host="testmcpdemo-e2abdecseafneea8.westeurope-01.azurewebsites.net", port=8080)
     #mcp.run()
+
 
 
 
