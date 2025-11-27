@@ -3,6 +3,7 @@ import requests
 from typing import Optional, Dict
 import boto3
 import json
+import os
 from config import *
 
 # def get_secrets(secret_name: str) -> str:
@@ -116,6 +117,7 @@ if __name__ == "__main__":
     mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
     #mcp.run(transport="streamable-http", host="testmcpdemo-e2abdecseafneea8.westeurope-01.azurewebsites.net", port=8080)
     #mcp.run()
+
 
 
 
