@@ -1,3 +1,3 @@
 fastmcp
 requests
-botot3
+boto3
